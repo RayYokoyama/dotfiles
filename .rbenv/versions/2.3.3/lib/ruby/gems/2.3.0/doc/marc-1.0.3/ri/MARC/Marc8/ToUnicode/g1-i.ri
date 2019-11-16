@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"g1:ETI"MARC::Marc8::ToUnicode#g1;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"7These are state flags, MARC8 requires you to keep ;TI"@track of 'current char sets' or something like that, which ;TI";are changed with escape codes, or something like that.;T:
+@fileI"!lib/marc/marc8/to_unicode.rb;T:0@omit_headings_from_table_of_contents_below0F@I"MARC::Marc8::ToUnicode;TcRDoc::NormalClass0

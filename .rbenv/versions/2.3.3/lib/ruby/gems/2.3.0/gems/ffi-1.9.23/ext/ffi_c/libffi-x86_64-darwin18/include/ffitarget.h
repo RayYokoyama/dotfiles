@@ -1,0 +1,1 @@
+/Users/ray_yokoyama/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/ffi-1.9.23/ext/ffi_c/libffi/src/x86/ffitarget.h
