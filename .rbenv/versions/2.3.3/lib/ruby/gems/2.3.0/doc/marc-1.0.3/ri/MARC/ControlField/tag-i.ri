@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"tag:ETI"MARC::ControlField#tag;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I""the tag value (007, 008, etc);T:
-@fileI"lib/marc/controlfield.rb;T:0@omit_headings_from_table_of_contents_below0F@I"MARC::ControlField;TcRDoc::NormalClass0

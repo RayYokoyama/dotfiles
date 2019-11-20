@@ -1,0 +1,36 @@
+# toml
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = ['toml']
+
+# ES6
+# syntax
+[[plugins]]
+repo = 'herringtondarkholme/yats.vim'
+on_ft = ['javascript', 'javascript.jsx', 'typescript', 'typescript.tsx']
+
+# coc (lsp)
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+build = './install.sh nightly'
+merged = '0'
+hook_add = '''
+  nnoremap gd <Plug>(coc-definition)
+  nnoremap gr <Plug>(coc-references)
+  nnoremap cr <Plug>(coc-rename)
+'''
+on_ft = ['javascript', 'javascript.jsx', 'typescript', 'typescript.tsx', 'c', 'cpp']
+
+# ruby
+# completion
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_i = 1
+on_ft = ['ruby']
+hook_add = 'let g:deoplete#enable_at_startup = 1'
+
+# completion ruby
+[[plugins]]
+repo = 'fishbullet/deoplete-ruby'
+on_ft = ['ruby']
+
