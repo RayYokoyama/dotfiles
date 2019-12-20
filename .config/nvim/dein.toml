@@ -25,7 +25,7 @@ hook_add = '''
   nnoremap <Space>b :Buffers<CR>
   command! -bang -nargs=? -complete=dir GFiles
     \ call fzf#vim#gitfiles(<q-args>, fzf#vim#with_preview(), <bang>0)
-  nnoremap <C-i> :GFiles<CR>
+  nnoremap <C-o> :GFiles<CR>
   nnoremap <C-s> :GFiles?<CR>
   command! -bang -nargs=* Ag
     \ call fzf#vim#ag(<q-args>,
@@ -89,3 +89,17 @@ repo = 'tpope/vim-surround'
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 
+[[plugins]]
+repo = 'luochen1990/rainbow'
+hook_add = '''
+  let g:rainbow_active = 1
+'''
+
+[[plugins]]
+repo = 'matze/vim-move'
+hook_add = '''
+  let g:move_key_modifier = 'S'
+'''
+
+[[pllugins]]
+repo = 'tpope/vim-rails'

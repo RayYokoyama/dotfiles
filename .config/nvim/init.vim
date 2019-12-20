@@ -17,7 +17,6 @@ if dein#check_install()
   call dein#install()
 end
 
-
 set number                     " 行番号を表示
 set autoindent                 " 改行時に自動でインデントする
 set smartindent                " いい感じにインデントする
@@ -30,6 +29,7 @@ set modifiable                 " tig開くときにないと怒られた
 set fileformats=unix,dos,mac   " ctag解析用
 set fileencodings=utf-8        " ctag解析用
 set tags=.tags;~               " ctag読み込む
+set tags=tags;~
 set hlsearch                   " 検索した文字のハイライト
 hi Search ctermbg=brown        " ハイライトのカラー
 hi Search ctermfg=White        " ハイライトのカラー
@@ -41,8 +41,10 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+nmap <silent> nf :NERDTreeFind<CR>
 nnoremap <space>g :exec 'Ag' expand('<cword>')<CR>
 nnoremap <space>t :sp<CR>:term<CR>i
-nnoremap tig :sp<CR>:term<CR>i tig<CR>
-nnoremap <C-c> empty(term_list()) ? <Esc> : <Esc>exit<CR>
-
+nnoremap tig :sp<CR>:term tig<CR>i
+nnoremap <silent><space>h :noh<CR>
+nnoremap <silent> <space>j :setlocal cursorline! cursorcolumn!<CR>
+nnoremap <space>i <S-i><Esc>v<Up>$d 
