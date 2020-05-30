@@ -1,7 +1,7 @@
 .DS_Store
-node_modules
+node_modules/
 node_modules/*
 .config/coc/extensions/node_modules
 .config/coc/extensions/node_modules/*
-.config/coc/extensions/node_modules/**
+.config/yarn/
 .rbenv
