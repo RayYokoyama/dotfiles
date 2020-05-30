@@ -1,9 +1,16 @@
 {
   "dependencies": {
+<<<<<<< HEAD
+    "coc-eslint": ">=1.2.7",
+    "coc-python": "^1.2.12",
+    "coc-solargraph": ">=1.1.6",
+    "coc-tsserver": ">=1.4.15"
+=======
 <<<<<<< Updated upstream
     "coc-tsserver": ">=1.4.9"
 =======
     "coc-tsserver": ">=1.4.6"
 >>>>>>> Stashed changes
+>>>>>>> 784b23c45be6a4cfa14930747f56303ca6c1994e
   }
 }

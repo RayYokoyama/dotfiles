@@ -3,7 +3,7 @@
 repo = 'cespare/vim-toml'
 on_ft = ['toml']
 
-# ES6
+# # ES6
 # syntax
 [[plugins]]
 repo = 'herringtondarkholme/yats.vim'
@@ -18,19 +18,14 @@ hook_add = '''
   nnoremap gd <Plug>(coc-definition)
   nnoremap gr <Plug>(coc-references)
   nnoremap cr <Plug>(coc-rename)
+  nnoremap <silent> K :call <SID>show_documentation()<CR>
+  function! s:show_documentation()
+    if (index(['vim','help'], &filetype) >= 0)
+      execute 'h '.expand('<cword>')
+    else
+      call CocAction('doHover')
+    endif
+  endfunction
 '''
-on_ft = ['javascript', 'javascript.jsx', 'typescript', 'typescript.tsx', 'c', 'cpp']
-
-# ruby
-# completion
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-on_i = 1
-on_ft = ['ruby']
-hook_add = 'let g:deoplete#enable_at_startup = 1'
-
-# completion ruby
-[[plugins]]
-repo = 'fishbullet/deoplete-ruby'
-on_ft = ['ruby']
+on_ft = ['javascript', 'javascript.jsx', 'typescript', 'typescript.tsx', 'c', 'cpp', 'ruby', 'python']
 
