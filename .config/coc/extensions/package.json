@@ -1,5 +1,9 @@
 {
   "dependencies": {
+<<<<<<< Updated upstream
     "coc-tsserver": ">=1.4.9"
+=======
+    "coc-tsserver": ">=1.4.6"
+>>>>>>> Stashed changes
   }
 }
