@@ -12,10 +12,19 @@ endif
 filetype plugin indent on
 syntax enable
 
-" If you want to install not installed plugins on startup.
+" If you want clean_chace
+call map(dein#check_clean(), "delete(v:val, 'rf')")
+
 if dein#check_install()
   call dein#install()
 end
+
+" for Python
+let g:python_host_prog = $PYENV_ROOT.'/shims/python'
+let g:python3_host_prog = $PYENV_ROOT.'/shims/python3'
+
+" Nerdtree
+let NERDTreeWinSize=26
 
 set number                     " 行番号を表示
 set autoindent                 " 改行時に自動でインデントする
@@ -42,9 +51,14 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> nf :NERDTreeFind<CR>
+nmap <silent> nt :NERDTree<CR>
 nnoremap <space>g :exec 'Ag' expand('<cword>')<CR>
 nnoremap <space>t :sp<CR>:term<CR>i
 nnoremap tig :sp<CR>:term tig<CR>i
 nnoremap <silent><space>h :noh<CR>
 nnoremap <silent> <space>j :setlocal cursorline! cursorcolumn!<CR>
-nnoremap <space>i <S-i><Esc>v<Up>$d 
+nnoremap <space>i <S-i><space><Left>space><Esc>v<Up>$d
+nnoremap <space>s *:%s/<C-r>///g<Left><Left>
+noremap <S-h>   ^
+nmap <S-l>   $
+noremap <silent> bd :%bd<CR>

@@ -7,10 +7,6 @@ repo = 'tpope/vim-endwise'
 [[plugins]]
 repo = 'Townk/vim-autoclose'
 
-# code check
-[[plugins]]
-repo = 'w0rp/ale'
-
 [[plugins]]
 repo = 'junegunn/fzf'
 build = './install --all'
@@ -25,7 +21,7 @@ hook_add = '''
   nnoremap <Space>b :Buffers<CR>
   command! -bang -nargs=? -complete=dir GFiles
     \ call fzf#vim#gitfiles(<q-args>, fzf#vim#with_preview(), <bang>0)
-  nnoremap <C-o> :GFiles<CR>
+  nnoremap <C-i> :GFiles<CR>
   nnoremap <C-s> :GFiles?<CR>
   command! -bang -nargs=* Ag
     \ call fzf#vim#ag(<q-args>,
@@ -42,7 +38,6 @@ repo = 'tomasiser/vim-code-dark'
 hook_add = '''
  colorscheme codedark
 '''
-
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
 hook_add = '''
@@ -95,11 +90,11 @@ hook_add = '''
   let g:rainbow_active = 1
 '''
 
-[[plugins]]
-repo = 'matze/vim-move'
-hook_add = '''
-  let g:move_key_modifier = 'S'
-'''
-
 [[pllugins]]
 repo = 'tpope/vim-rails'
+
+[[plugins]]
+repo = 'matze/vim-move'
+
+[[plugins]]
+repo = 'cohama/lexima.vim'

@@ -1,0 +1,30 @@
+{
+  "title": "browser",
+  "conditions": [
+    {
+      "type": "change_enter_line_app",
+      "bundle_identifiers": [
+        "^LINE\\.app",
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "description": "change_enter_line_app",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "enter"
+          },
+          "to": [
+            {
+              "key_code": "enter",
+              "modifiers": ["command"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
