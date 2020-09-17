@@ -10,7 +10,6 @@ repo = 'Townk/vim-autoclose'
 [[plugins]]
 repo = 'junegunn/fzf'
 build = './install --all'
-
 [[plugins]]
 repo = 'junegunn/fzf.vim'
 hook_add = '''
@@ -35,9 +34,7 @@ hook_add = '''
 # colorscheme
 [[plugins]]
 repo = 'tomasiser/vim-code-dark'
-hook_add = '''
- colorscheme codedark
-'''
+
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
 hook_add = '''
@@ -98,3 +95,34 @@ repo = 'matze/vim-move'
 
 [[plugins]]
 repo = 'cohama/lexima.vim'
+
+[[plugins]]
+repo = 'kannokanno/previm'
+
+#tex
+[[plugins]]
+repo = 'lervag/vimtex'
+hook_add = '''
+  let g:vimtex_view_method='skim'
+  let g:tex_conceal = ''
+  let g:vimtex_compiler_progname='nvr'
+  let g:vimtex_fold_envs = 0
+  let g:vimtex_view_general_viewer = '/Applications/Skim.app/Contents/SharedSupport/displayline'
+  let g:vimtex_view_general_options = '@line @pdf @tex'
+  let g:vimtex_compiler_latexmk = {
+      \ 'background' : 1,
+      \ 'build_dir' : '',
+      \ 'callback' : 0,
+      \ 'continuous' : 1,
+      \ 'executable' : 'latexmk',
+      \ 'options' : [],
+      \}
+'''
+
+on_ft = ['tex']
+
+[[plugins]]
+repo = 'simeji/winresizer'
+hook_add = '''
+  let g:winresizer_start_key = '<C-q>'
+'''

@@ -19,9 +19,19 @@ if dein#check_install()
   call dein#install()
 end
 
+" for colorscheme
+colorscheme codedark
+
 " for Python
 let g:python_host_prog = $PYENV_ROOT.'/shims/python'
 let g:python3_host_prog = $PYENV_ROOT.'/shims/python3'
+
+" for previm
+let g:previm_open_cmd = 'open -a Google\ Chrome'
+augroup PrevimSettings
+    autocmd!
+    autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
+augroup END
 
 " Nerdtree
 let NERDTreeWinSize=26
@@ -62,3 +72,4 @@ nnoremap <space>s *:%s/<C-r>///g<Left><Left>
 noremap <S-h>   ^
 nmap <S-l>   $
 noremap <silent> bd :%bd<CR>
+noremap <silent> bw :bp<bar>sp<bar>bn<bar>bd<CR>
