@@ -1,4 +1,4 @@
-  #!/bin/bash
+#!/bin/bash
 
 echo "Create synlink..."
 
@@ -8,3 +8,4 @@ do
 done
 
 echo "Succeeded!"
+
