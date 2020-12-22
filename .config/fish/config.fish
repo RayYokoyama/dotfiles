@@ -41,6 +41,20 @@ set -x TP_HOME /usr/local/Cellar/ $TP_HOME
 set -x LD_LIBRARY_PATH /usr/local/Cellar/TextParser/lib $LD_LIBRARY_PATH
 
 # set -x PATH $TP_HOME $PATH
+# ghq + peco
+function ghq_peco_repo
+  set selected_repository (ghq list -p | peco --query "$LBUFFER")
+  if [ -n "$selected_repository" ]
+    cd $selected_repository
+    echo " $selected_repository "
+    commandline -f repaint
+  end
+end
+
+# fish key bindings
+function fish_user_key_bindings
+  bind /cg ghq_peco_repo
+end
  
 # for go
 set -x GOPATH $HOME/go
@@ -59,4 +73,5 @@ alias dsrailsc='docker exec -it sales /usr/local/src/bin/rails c'
 alias localrails='bundle exec rails s -b 0.0.0.0 -p 3002'
 alias vim='nvim'
 alias nvimtex="env NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim"
+alias cdsales='cd ~/go/src/github.com/Baseconnect/sales'
 

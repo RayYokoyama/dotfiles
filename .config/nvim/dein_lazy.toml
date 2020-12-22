@@ -27,4 +27,4 @@ hook_add = '''
     endif
   endfunction
 '''
-on_ft = ['javascript', 'javascript.jsx', 'typescript', 'typescript.tsx', 'c', 'cpp', 'ruby', 'python', 'tex', 'css']
+on_ft = ['javascript', 'javascript.jsx', 'typescript', 'typescript.tsx', 'c', 'cpp', 'ruby', 'python', 'tex', 'css', 'go']
