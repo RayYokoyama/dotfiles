@@ -40,10 +40,6 @@ set -U FZF_LEGACY_KEYBINDINGS 0
 set -x TP_HOME /usr/local/Cellar/ $TP_HOME
 set -x LD_LIBRARY_PATH /usr/local/Cellar/TextParser/lib $LD_LIBRARY_PATH
 
-### for github container
-set -x CR_PAT e470a55d6661994de4015de0468836295c8ff80f
-
-
 # set -x PATH $TP_HOME $PATH
  
 # for go
